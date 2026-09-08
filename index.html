@@ -1,8 +1,16 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Marchbank &amp; Vale Associates — arrears recovery, statutory notices and litigation support for landlords, freeholders and management companies across England and Wales.">
 <title>Marchbank &amp; Vale Associates</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&family=Libre+Caslon+Text:wght@400;700&family=Inter:wght@400;500;600&display=swap">
 
+</head>
+<body>
 <style>
 /* Marchbank & Vale Associates - tokens per asset sheet v1.0
    Light only. The identity is printed stationery: ink on paper in every context.
@@ -226,6 +234,40 @@ footer :focus-visible{outline-color:var(--mv-brass-light)}
   color:var(--mv-slate); padding:11px 18px; border-top:1px solid var(--mv-hairline-soft);
   background:var(--mv-paper)}
 @media(max-width:560px){ .chat-open{right:16px; bottom:16px} .chat-panel{right:16px; bottom:16px} }
+
+/* ── mobile refinements ── */
+@media(max-width:700px){
+  .hero{padding:40px 0 46px}
+  .hero h1{font-size:clamp(26px,7vw,32px)}
+  .hero .dek{font-size:16.5px; max-width:none}
+  .hero-cta{gap:10px}
+  .hero-cta .btn{flex:1 1 100%; justify-content:center}
+  .sec{padding:52px 0}
+  .sec h2{font-size:25px}
+  .dek{font-size:16.5px}
+  .sheet{padding:22px 18px}
+  .sheet-mark svg{width:200px}
+  .sheet-body{font-size:12.5px}
+  .sheet-refs{font-size:9.5px; gap:2px 12px}
+  .cgrid{gap:32px}
+  .dl{grid-template-columns:1fr; gap:4px 0}
+  .dl dt{padding-top:14px}
+  .stage{padding:20px 18px 22px}
+  .row{padding:20px 0}
+  .row h3{font-size:19px}
+  .two > div{padding:24px 20px}
+  .art{padding:22px 20px 24px}
+  footer{padding:42px 0 34px}
+  .foot-mark{width:100%}
+  .compliance{font-size:9.5px}
+  .chat-open{right:14px; bottom:14px; padding:12px 16px; font-size:11px}
+}
+@media(max-width:430px){
+  .hero h1{font-size:26px}
+  .brand svg{width:190px}
+  .btn{padding:10px 12px; font-size:10.5px; letter-spacing:.06em}
+  .figcap{text-align:left}
+}
 </style>
 
 <header class="mast">
@@ -650,3 +692,5 @@ document.getElementById('instruct-form').addEventListener('submit', function(e){
   });
 })();
 </script>
+</body>
+</html>
