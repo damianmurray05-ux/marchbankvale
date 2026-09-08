@@ -38,15 +38,17 @@ section[id]{scroll-margin-top:112px}
 
 .mast{position:sticky; top:0; z-index:40; background:var(--mv-paper);
   border-bottom:1px solid var(--mv-hairline)}
-.mast-in{display:flex; align-items:center; gap:30px; height:92px}
+.mast-in{display:flex; align-items:center; gap:30px; height:124px}
 .brand{margin-right:auto; display:block; line-height:0}
-.brand svg{width:238px; height:auto; display:block}
+.brand svg{width:440px; height:auto; display:block}
 .nav{display:flex; gap:28px; font-family:var(--font-ui); font-size:13px; font-weight:500}
 .nav a{text-decoration:none; color:var(--mv-slate); padding:5px 0;
   border-bottom:1px solid transparent; transition:color .16s, border-color .16s}
 .nav a:hover{color:var(--mv-ink); border-bottom-color:var(--mv-hairline)}
-@media(max-width:1000px){ .nav{display:none} }
-@media(max-width:560px){ .mast-in{height:76px; gap:14px} .brand svg{width:172px} }
+@media(max-width:1200px){ .brand svg{width:360px} }
+@media(max-width:1000px){ .nav{display:none} .brand svg{width:400px} }
+@media(max-width:700px){ .mast-in{height:96px; gap:14px} .brand svg{width:280px} }
+@media(max-width:480px){ .mast-in{height:84px} .brand svg{width:210px} }
 
 .btn{display:inline-flex; align-items:center; font-family:var(--font-ui); font-size:12px; font-weight:600;
   letter-spacing:.11em; text-transform:uppercase; padding:13px 21px; text-decoration:none;
@@ -271,7 +273,7 @@ footer :focus-visible{outline-color:var(--mv-brass-light)}
         </div>
 
         <div class="sheet-refs">
-          <span>Our reference</span><b>MV/LRG/0214/26</b>
+          <span>Our reference</span><b>MV/TFE/0214/26</b>
           <span>Date</span><b>31 August 2026</b>
           <span>Service</span><b>First class post and email</b>
         </div>
@@ -281,7 +283,7 @@ footer :focus-visible{outline-color:var(--mv-brass-light)}
         <div class="sheet-body">
           <p>Dear <span class="redact" style="width:5.6em"></span></p>
           <p><strong>Property: <span class="redact" style="width:12em"></span></strong></p>
-          <p>We are instructed by The Lancaster Residential Group Limited in relation to the tenancy of the above property. Our client's records show rent arrears of <span class="tape">£4,180.00</span> as at 31 August 2026, being four monthly instalments of <span class="num">£1,045.00</span> falling due on the 1st of each month.</p>
+          <p>We are instructed by Thornfield Estates (No. 4) Limited in relation to the tenancy of the above property. Our client's records show rent arrears of <span class="tape">£4,180.00</span> as at 31 August 2026, being four monthly instalments of <span class="num">£1,045.00</span> falling due on the 1st of each month.</p>
           <p class="sheet-fade">This letter is sent in accordance with the Pre-Action Protocol for Debt Claims. Enclosed with it you will find the prescribed Information Sheet, a Reply Form and a Financial Statement, together with a full statement of account showing every payment received and every sum charged…</p>
         </div>
 
@@ -482,7 +484,6 @@ footer :focus-visible{outline-color:var(--mv-brass-light)}
     <div class="cgrid">
       <div>
         <dl class="dl">
-          <dt>Principal</dt><dd>Damian Murray</dd>
           <dt>Casework</dt><dd><a href="mailto:casework@marchbankvale.co.uk">casework@marchbankvale.co.uk</a></dd>
           <dt>Enquiries</dt><dd><a href="mailto:enquiries@marchbankvale.co.uk">enquiries@marchbankvale.co.uk</a></dd>
           <dt>Hours</dt><dd>Monday to Friday, 09:00–17:30</dd>
