@@ -1,0 +1,101 @@
+/* Marchbank & Vale Associates — shared design system */
+:root{
+  --mv-ink:#131E2C; --mv-slate:#47566B; --mv-brass:#8F7238; --mv-brass-light:#C6A667;
+  --mv-tape:#7A2E3C; --mv-engrossment:#E8E7E1; --mv-paper:#F5F4EF; --mv-card:#FFFFFF;
+  --mv-hairline:#CFCCC2; --mv-hairline-soft:#E0DDD4; --mv-reversed:#9AA6B8;
+  --font-display:"Libre Caslon Display",Georgia,"Times New Roman",serif;
+  --font-text:"Libre Caslon Text",Georgia,"Times New Roman",serif;
+  --font-ui:Inter,system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif;
+  --maxw:1120px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media(prefers-reduced-motion:reduce){ html{scroll-behavior:auto} *{transition:none!important} }
+body{margin:0; background:var(--mv-paper); color:var(--mv-ink);
+  font-family:var(--font-text); font-size:16.5px; line-height:1.62; -webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:var(--font-display); font-weight:400; margin:0; line-height:1.2; text-wrap:balance}
+p{margin:0}
+a{color:inherit}
+em{font-style:normal; font-weight:700}
+:focus-visible{outline:2px solid var(--mv-brass); outline-offset:3px}
+.wrap{max-width:var(--maxw); margin:0 auto; padding:0 30px}
+@media(max-width:700px){ .wrap{padding:0 20px} }
+.lbl{font-family:var(--font-ui); font-size:10.5px; font-weight:600; letter-spacing:.18em;
+  text-transform:uppercase; color:var(--mv-slate)}
+
+/* masthead */
+.mast{position:sticky; top:0; z-index:40; background:var(--mv-paper); border-bottom:1px solid var(--mv-hairline)}
+.mast-in{display:flex; align-items:center; gap:30px; height:124px}
+.brand{margin-right:auto; display:block; line-height:0}
+.brand svg{width:440px; height:auto; display:block}
+.nav{display:flex; gap:28px; font-family:var(--font-ui); font-size:13px; font-weight:500}
+.nav a{text-decoration:none; color:var(--mv-slate); padding:5px 0; border-bottom:1px solid transparent;
+  transition:color .16s, border-color .16s}
+.nav a:hover{color:var(--mv-ink); border-bottom-color:var(--mv-hairline)}
+@media(max-width:1200px){ .brand svg{width:360px} }
+@media(max-width:1000px){ .nav{display:none} .brand svg{width:400px} }
+@media(max-width:700px){ .mast-in{height:96px; gap:14px} .brand svg{width:280px} }
+@media(max-width:480px){ .mast-in{height:84px} .brand svg{width:210px} }
+
+.btn{display:inline-flex; align-items:center; font-family:var(--font-ui); font-size:12px; font-weight:600;
+  letter-spacing:.11em; text-transform:uppercase; padding:13px 21px; text-decoration:none;
+  border:1px solid var(--mv-ink); background:var(--mv-ink); color:var(--mv-paper);
+  cursor:pointer; transition:background .16s, color .16s}
+.btn:hover{background:transparent; color:var(--mv-ink)}
+.btn-ghost{background:transparent; color:var(--mv-ink); border-color:var(--mv-hairline)}
+.btn-ghost:hover{border-color:var(--mv-ink)}
+@media(max-width:560px){ .btn{padding:11px 14px; font-size:11px; letter-spacing:.08em} }
+
+/* blog index */
+.page-head{padding:72px 0 44px; border-bottom:1px solid var(--mv-hairline)}
+.page-head h1{font-size:clamp(30px,4vw,42px); margin-top:14px}
+.page-head .dek{font-size:17.5px; line-height:1.55; color:var(--mv-slate); max-width:62ch; margin-top:16px}
+
+.posts{border-top:1px solid var(--mv-hairline); margin:0 0 80px}
+.post-row{display:grid; grid-template-columns:170px 1fr; gap:36px; padding:30px 0;
+  border-bottom:1px solid var(--mv-hairline-soft); text-decoration:none; align-items:baseline;
+  transition:background .16s}
+.post-row:hover{background:var(--mv-engrossment)}
+.post-row .meta{font-family:var(--font-ui); font-size:10.5px; font-weight:600; letter-spacing:.14em;
+  text-transform:uppercase; color:var(--mv-slate); line-height:1.9}
+.post-row h2{font-size:23px; line-height:1.26}
+.post-row p{font-size:15.5px; color:var(--mv-slate); margin-top:10px; max-width:70ch}
+@media(max-width:760px){ .post-row{grid-template-columns:1fr; gap:10px} }
+
+/* article */
+.article{padding:64px 0 40px; max-width:74ch; margin:0 auto}
+.article .kicker{font-family:var(--font-ui); font-size:10.5px; font-weight:600; letter-spacing:.16em;
+  text-transform:uppercase; color:var(--mv-slate)}
+.article h1{font-size:clamp(28px,3.8vw,40px); margin:16px 0 0}
+.article .byline{font-family:var(--font-ui); font-size:11px; letter-spacing:.1em; color:var(--mv-slate);
+  margin-top:20px; padding-bottom:26px; border-bottom:1px solid var(--mv-hairline)}
+.article h2{font-size:24px; margin:38px 0 12px}
+.article p{margin:0 0 16px; font-size:17px; line-height:1.68}
+.article ul{margin:0 0 18px; padding-left:22px; display:flex; flex-direction:column; gap:9px}
+.article li{font-size:16.5px; line-height:1.6}
+.article .standfirst{font-size:19px; line-height:1.6; color:var(--mv-slate); margin:26px 0 30px}
+.article .pull{border-left:2px solid var(--mv-brass); padding:4px 0 4px 22px; margin:26px 0;
+  font-size:17px; line-height:1.62; color:var(--mv-slate)}
+.article .pull b{color:var(--mv-ink); font-weight:700}
+.article .figure{color:var(--mv-tape); font-weight:700; font-variant-numeric:tabular-nums}
+.sources{margin-top:44px; padding-top:22px; border-top:1px solid var(--mv-hairline)}
+.sources h3{font-family:var(--font-ui); font-size:10.5px; font-weight:600; letter-spacing:.16em;
+  text-transform:uppercase; color:var(--mv-slate); margin-bottom:12px}
+.sources ul{list-style:none; padding:0; margin:0; display:flex; flex-direction:column; gap:7px}
+.sources a{font-size:14.5px; color:var(--mv-slate)}
+.notice{margin-top:40px; padding:20px 22px; background:var(--mv-engrossment); border:1px solid var(--mv-hairline);
+  font-size:14.5px; line-height:1.6; color:var(--mv-slate)}
+.notice b{color:var(--mv-ink); font-weight:700}
+.backlink{font-family:var(--font-ui); font-size:11.5px; font-weight:600; letter-spacing:.12em;
+  text-transform:uppercase; color:var(--mv-slate); text-decoration:none; display:inline-block; margin-top:36px}
+.backlink:hover{color:var(--mv-ink)}
+
+/* footer */
+footer{background:var(--mv-ink); color:var(--mv-engrossment); padding:56px 0 40px}
+.foot-mark{width:300px; max-width:100%; height:auto; display:block}
+.compliance{margin-top:34px; padding-top:24px; border-top:1px solid rgba(154,166,184,.3);
+  font-family:var(--font-ui); font-size:10px; line-height:1.75; letter-spacing:.055em;
+  text-transform:uppercase; color:var(--mv-reversed)}
+.compliance span{display:block}
+.compliance b{color:var(--mv-engrossment); font-weight:600}
+footer :focus-visible{outline-color:var(--mv-brass-light)}
