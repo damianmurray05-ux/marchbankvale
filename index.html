@@ -237,6 +237,13 @@ footer :focus-visible{outline-color:var(--mv-brass-light)}
 
 /* ── mobile refinements ── */
 @media(max-width:700px){
+  /* The header button competes with the wordmark for width on a phone.
+     Both hero buttons sit immediately below, so the header one is redundant —
+     dropping it lets the name be legible, which matters more. */
+  .mast .btn{display:none}
+  .mast-in{height:auto; padding:18px 0; gap:0}
+  .brand{margin-right:0; width:100%}
+  .brand svg{width:100%; max-width:340px}
   .hero{padding:40px 0 46px}
   .hero h1{font-size:clamp(26px,7vw,32px)}
   .hero .dek{font-size:16.5px; max-width:none}
@@ -264,7 +271,7 @@ footer :focus-visible{outline-color:var(--mv-brass-light)}
 }
 @media(max-width:430px){
   .hero h1{font-size:26px}
-  .brand svg{width:190px}
+  .brand svg{max-width:300px}
   .btn{padding:10px 12px; font-size:10.5px; letter-spacing:.06em}
   .figcap{text-align:left}
 }
